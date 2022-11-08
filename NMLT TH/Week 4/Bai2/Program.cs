@@ -16,6 +16,7 @@ namespace Bai2 {
 			Console.WriteLine($"Trước Khi Hoán Đổi : a = {a}, b = {b}");
 			HoanDoi(ref a, ref b);
 			Console.WriteLine($"Sau Khi Hoán Đổi : a = {a}, b = {b}");
+			Console.ReadKey();
 		}
 	}
 }
