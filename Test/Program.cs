@@ -2,16 +2,21 @@
 
 namespace Test {
 	class Program {
-		static int TimMin(int a, int b, int c) {
-			int max = a;
-			if (max > b) {
+		static void TimMinMax(int a, int b, int c, out int max, out int min) {
+			min = a;
+			if (min > b) {
+				min = b;
+			}
+			if (min > c) {
+				min = c;
+			}
+			max = a;
+			if (max < b) {
 				max = b;
 			}
-
-			if (max > c) {
+			if (max < c) {
 				max = c;
 			}
-			return max;
 		}
 		static void Main(string[] args) {
 			Console.OutputEncoding = System.Text.Encoding.UTF8;
@@ -20,7 +25,12 @@ namespace Test {
 			a = int.Parse(Console.ReadLine());
 			b = int.Parse(Console.ReadLine());
 			c = int.Parse(Console.ReadLine());
-			Console.Write($"Số bé nhất là: " + TimMin(a, b, c));
+			int max, min;
+			TimMinMax(a, b, c, out max, out min);
+			Console.WriteLine($"Số lớn nhất trong 3 số {a}, {b}, {c} là: " + max);
+			Console.WriteLine($"Số bé nhất trong 3 số {a}, {b}, {c} là: " + min);
+			Console.ReadKey();
 		}
+
 	}
 }
