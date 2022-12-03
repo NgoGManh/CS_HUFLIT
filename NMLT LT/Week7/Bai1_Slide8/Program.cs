@@ -7,15 +7,12 @@ namespace Bai1 {
 			for (int i = 1; i < a.Length; i++) {
 				if (a[i] > max) {
 					max = a[i];
-					Console.WriteLine("max = " + max);
 				}
 			}
 			bool[] states = new bool[max + 1];
 			for (int i = 0; i < a.Length; i++) {
-				Console.WriteLine($"states[a{i}] = {states[a[i]]} trước khi đánh dấu = " + states[a[i]]);
 				if (states[a[i]] == false) {
 					states[a[i]] = true;
-					Console.WriteLine($"states[a{i}] = {states[a[i]]} sau khi đánh dấu = " + states[a[i]]);
 				}
 			}
 			return states;
