@@ -21,7 +21,6 @@ namespace Bai4 {
 			} else {
 				Console.WriteLine($"c = {c} là số lớn nhất.");
 			}
-
 		}
 	}
 }
